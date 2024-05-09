@@ -12,7 +12,7 @@ body{
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: #16182c;
+    background:blueviolet;
 }
 .wrapper{
     width: 605px;
@@ -59,7 +59,7 @@ body{
     font-family: monospace;
 }
 .wrapper .buttons{
-    border-top: 1px solid #cccccc;
+    border-top: 1px solid blueviolet;
 }
 .buttons .features{
     display: flex;
@@ -112,7 +112,7 @@ body{
     margin: 20px 0;
     width: 100%;
     border-radius: 50px;
-    border: 1px solid #ccc;
+    border: 2px solid #ccc;
     font-size: 16px;
     outline: none;
 }
@@ -151,4 +151,16 @@ body{
 .search-result:hover {
     background: #eaeaea;
 }
-
+.search {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+}
+.search:hover {
+    border: 2px solid #888;
+}
