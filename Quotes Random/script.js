@@ -1,4 +1,4 @@
-// Your existing JavaScript code
+// JavaScript code
 
 const QuoteText = document.querySelector(".quote");
 const quoteBtn = document.querySelector("button");
@@ -7,7 +7,7 @@ const soundBtn = document.querySelector(".sound");
 const copyBtn = document.querySelector(".copy");
 const shareBtn = document.querySelector(".share");
 
-// Your array of quotes
+// array of quotes
 const quotesArray = [
   {
     "text": "Genius is one percent inspiration and ninety-nine percent perspiration.",
@@ -113,3 +113,18 @@ copyBtn.addEventListener("click", () => {
     navigator.clipboard.writeText(QuoteText.innerText + ' __ ' + authorName.innerText);
     alert("Quote copied to clipboard.");
 });
+// Add a search input
+const searchInput = document.querySelector(".search");
+
+function searchQuote() {
+    const searchText = searchInput.value.toLowerCase();
+    for (let quote of quotesArray) {
+        if (quote.text.toLowerCase().includes(searchText) || quote.author.toLowerCase().includes(searchText)) {
+            QuoteText.innerText = quote.text;
+            authorName.innerText = quote.author;
+            break;
+        }
+    }
+}
+
+searchInput.addEventListener("input", searchQuote);
